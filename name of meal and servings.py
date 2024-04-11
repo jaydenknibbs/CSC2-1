@@ -15,7 +15,7 @@ txt = 'Wow {} sounds nice'
 print (txt.format(meal))
 #ask about servings under here
 while True:
-    servings = int(input('How many servings in this meal? '))
+    servings = num_check(input('How many servings in this meal? '))
     if 1 <= servings <= 120:
         break
     elif servings < 1:

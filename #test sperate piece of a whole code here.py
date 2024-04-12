@@ -1,8 +1,12 @@
-#test sperate piece of a whole code here
+#ask for the name of the meal
 while True:
-    meal = input("What is the name of the meal you whish to create ")
-    txt = 'Wow {} sounds nice'
-    print (txt.format(meal))
-    
+    meal = input("What is the name of the meal you wish to create: ")
+    if not any(char.isdigit() for char in meal):
+        break
+    else:
+        print("Meal name cannot contain numbers. Please enter again.")
+
+txt = 'Wow {} sounds nice'
+print(txt.format(meal))
     
     

@@ -1,7 +1,19 @@
+#day 1 of being cooked
+supplies = []
+
 # func goes here if any
 
 
 #normi stuff here
-print ('now we will list the ingrediants')
-ingredients  = input('how many ingrdiants are there? ')
-ingredients = <1 or >50:
+while True:
+    ingrediants = input(' what is an ingrediant in the dish: ')
+    data.append(ingrediants)
+    choice = input('would you like to add another ingrediant (yes or no): ')
+    if choice == 'no':
+        break
+
+for element in supplies:
+    print (element)
+
+
+

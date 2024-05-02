@@ -42,30 +42,8 @@ while True:
         break
     else:
         print("Meal name cannot contain numbers. Please enter again.")
-
 txt = 'Wow {} sounds nice'
 print(txt.format(meal))
-
-# Ask about servings
-while True:
-    servings = num_check('How many servings in this meal? ')
-    if 1 <= servings <= 120:
-        break
-    elif servings < 1:
-        print('Please enter a reasonable amount.')
-    else:
-        print('That seems incorrect, please retry.')
-
-while True:
-    meal = input("What is the name of the meal you wish to create: ")
-    if not any(char.isdigit() for char in meal):
-        break
-    else:
-        print("Meal name cannot contain numbers. Please enter again.")
-
-txt = 'Wow {} sounds nice'
-print(txt.format(meal))
-
 #ask about servings under here
 while True:
     servings = num_check(input('How many servings in this meal? '))

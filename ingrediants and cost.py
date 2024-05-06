@@ -17,3 +17,5 @@ while True:
 ingrediants_cost = zip(supplies, cost)
 for i in ingrediants_cost:
     print (i)
+
+list[cost]

@@ -1,4 +1,4 @@
-#day 1 of being cooked
+#day 6 of being cooked
 supplies = []
 cost = []
 # func goes here if any

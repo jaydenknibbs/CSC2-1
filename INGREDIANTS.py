@@ -6,7 +6,7 @@ def num_check(amount):
             return response
     
         except ValueError:
-            print("please enter a number") 
+            print("please enter a number: ") 
 # the name of each item in the meal
-print ('now continuing on please enter the amount of ingrediants in the meal')
+print ('now continuing on please enter the amount of ingrediants in the meal: ')
 ingreadint_count = num_check(input(''))

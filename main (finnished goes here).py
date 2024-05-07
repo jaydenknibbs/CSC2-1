@@ -1,3 +1,6 @@
+supplies = []
+cost = []
+
 def yes_no(question):
     """
     Function to prompt user for a yes/no response.
@@ -34,7 +37,6 @@ if instructions == 'yes':
     print("- Enter the cost")
     print("It will then calculate how much each meal will cost you and how much it costs per serving.")
     print("")
-
 # Ask for the name of the meal
 while True:
     meal = input("What is the name of the meal you wish to create: ")
@@ -55,4 +57,16 @@ while True:
     else:
         print('That seems incorrect please retry')
         continue
-print('program continues')
+#normi stuff here
+while True:
+    ingrediants = input(' what is an ingrediant in the dish: ')
+    supplies.append(ingrediants)
+    price = input('What is the price of the item?')
+    cost.append(price)
+    choice = input('would you like to add another ingrediant (yes or no): ')
+    if choice == 'no':
+        break
+ingrediants_cost = zip(supplies, cost)
+for i in ingrediants_cost:
+    print (i)
+list[cost]

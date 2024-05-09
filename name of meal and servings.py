@@ -2,7 +2,7 @@
 def num_check(amount):
     while True:
         try:
-            response= int(input(amount))
+            response = int(input(amount))
             return response
     
         except ValueError:

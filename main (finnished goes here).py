@@ -16,16 +16,12 @@ def yes_no(question):
             print("Please enter yes or no")
 
 def num_check(amount):
-    """
-    Function to check if input is a valid number.
-    """
     while True:
         try:
-            response = int(input(amount))
+            response = int(amount)
             return response
         except ValueError:
             print("Please enter a number")
-
 # Ask if instructions are needed
 instructions = yes_no("Do you need instructions? ")
 if instructions == 'yes':
@@ -66,7 +62,5 @@ while True:
     choice = input('would you like to add another ingrediant (yes or no): ')
     if choice == 'no':
         break
-ingrediants_cost = zip(supplies, cost)
-for i in ingrediants_cost:
-    print (i)
-list[cost]
+for item, price in zip(supplies, cost):
+    print(f'{item}: ${price}')

@@ -1,10 +1,8 @@
+#main
 supplies = []
 cost = []
 
 def yes_no(question):
-    """
-    Function to prompt user for a yes/no response.
-    """
     while True:
         response = input(question).lower()
 
@@ -19,9 +17,13 @@ def num_check(amount):
     while True:
         try:
             response = int(amount)
+            if response < 1:
+                print("Please enter a reasonable number")
+                continue
             return response
         except ValueError:
             print("Please enter a number")
+
 # Ask if instructions are needed
 instructions = yes_no("Do you need instructions? ")
 if instructions == 'yes':
@@ -33,6 +35,7 @@ if instructions == 'yes':
     print("- Enter the cost")
     print("It will then calculate how much each meal will cost you and how much it costs per serving.")
     print("")
+
 # Ask for the name of the meal
 while True:
     meal = input("What is the name of the meal you wish to create: ")
@@ -42,25 +45,26 @@ while True:
         print("Meal name cannot contain numbers. Please enter again.")
 txt = 'Wow {} sounds nice'
 print(txt.format(meal))
-#ask about servings under here
+
+# Ask about servings
 while True:
     servings = num_check(input('How many servings in this meal? '))
-    if 1 <= servings <= 120:
+    if servings <= 120:
         break
-    elif servings < 1:
-        ('please Put in a reasonable amount')
-        continue   
     else:
-        print('That seems incorrect please retry')
-        continue
-#normi stuff here
+        print('That seems excessive, please enter a reasonable amount')
+
+# Loop for ingredients and their costs
 while True:
-    ingrediants = input(' what is an ingrediant in the dish: ')
-    supplies.append(ingrediants)
-    price = input('What is the price of the item?')
+    ingredient = input('What is an ingredient in the dish: ')
+    supplies.append(ingredient)
+    price = input('What is the price of the item? ')
     cost.append(price)
-    choice = input('would you like to add another ingrediant (yes or no): ')
+    choice = yes_no('Would you like to add another ingredient (yes or no): ')
     if choice == 'no':
         break
+
+# Printing ingredient-cost pairs
+print("Ingredients and their costs:")
 for item, price in zip(supplies, cost):
     print(f'{item}: ${price}')

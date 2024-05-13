@@ -52,13 +52,13 @@ while True:
     if servings <= 120:
         break
     else:
-        print('That seems excessive, please enter a reasonable amount')
+        print('please enter a reasonable amount ')
 
 # Loop for ingredients and their costs
 while True:
     ingredient = input('What is an ingredient in the dish: ')
     supplies.append(ingredient)
-    price = input('What is the price of the item? ')
+    price = input('What is the price of the item per 100g? ')
     cost.append(price)
     choice = yes_no('Would you like to add another ingredient (yes or no): ')
     if choice == 'no':
@@ -68,3 +68,5 @@ while True:
 print("Ingredients and their costs:")
 for item, price in zip(supplies, cost):
     print(f'{item}: ${price}')
+
+# the  items in the list will then be used to workout the total cost of the meal.

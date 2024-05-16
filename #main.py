@@ -64,7 +64,6 @@ while True:
     if choice == 'no':
         break
 
-# Printing ingredient-cost pairs
 print("Ingredients and their costs:")
 for item, price in zip(supplies, cost):
     print(f'{item}: ${price}')

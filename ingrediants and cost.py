@@ -1,21 +1,20 @@
 #day 6 of being cooked
 supplies = []
 cost = []
-# func goes here if any
-
 
 #normi stuff here
 while True:
-    ingrediants = input(' what is an ingrediant in the dish: ')
-    supplies.append(ingrediants)
-    price = input('What is the price of the item?')
+    ingredient = input('What is an ingredient in the dish: ')
+    supplies.append(ingredient)
+    price = input('What is the price of the item? ')
     cost.append(price)
-    choice = input('would you like to add another ingrediant (yes or no): ')
-    if choice == 'no':
+    choice = input('Would you like to add another ingredient (yes or no): ')
+    if choice.lower() == 'no':
         break
 
-ingrediants_cost = zip(supplies, cost)
-for i in ingrediants_cost:
-    print (i)
+ingredients_cost = zip(supplies, cost)
+for item, price in ingredients_cost:
+    print(f'{item}: ${price}')
 
-list[cost]
+# Assuming you wanted to print the list of costs, not access an index of the list
+print(cost)

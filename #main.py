@@ -1,7 +1,7 @@
 #main
 supplies = []
 cost = []
-
+weight = []
 def yes_no(question):
     while True:
         response = input(question).lower()
@@ -68,4 +68,19 @@ print("Ingredients and their costs:")
 for item, price in zip(supplies, cost):
     print(f'{item}: ${price}')
 
-# the  items in the list will then be used to workout the total cost of the meal.
+
+# Ingredient amounts required
+print("Ingredient amounts required:")
+for item in supplies:
+    amount = input(f"How much of {item} do you need?( in grams) ")
+    weight.append(amount)
+
+# Calculate the total cost of ingredients
+total_cost = sum(float(c) for c in cost)
+
+# Calculate the cost per serving
+cost_per_serving = total_cost / servings
+
+# Output the total cost and cost per serving
+print(f"\nThe total cost of '{meal}' recipe is: ${total_cost:.2f}")
+print(f"The cost per serving is: ${cost_per_serving:.2f}")

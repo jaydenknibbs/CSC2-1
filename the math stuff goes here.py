@@ -27,3 +27,14 @@ while True:
     if choice == 'no':
         break
 
+# Calculate the total cost of ingredients
+total_cost = 0
+for item_cost in cost:
+    total_cost += float(item_cost)
+
+# Calculate the cost per serving
+cost_per_serving = total_cost / servings
+
+# Output the total cost and cost per serving
+print(f"\nThe total cost of '{meal}' recipe is: ${total_cost:.2f}")
+print(f"The cost per serving is: ${cost_per_serving:.2f}")
